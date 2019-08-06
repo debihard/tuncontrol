@@ -734,21 +734,26 @@ update_system
 check_installed_packages
 start_all_socks
 ;;
+
 2)
 killall_screen
 killall_threads
 killall_checker
 killall_ssh
 ;;
+
 3)
 show_bad_tunnels
 ;;
+
 4)
 show_tunnels_status
 ;;
+
 5)
 check_socks_status
 ;;
+
 6)
 
 menu=""
@@ -822,7 +827,8 @@ screen -r 10-thread
 ;;
 
 11)
-break ;;
+break 
+;;
 
 *) ;;
 
