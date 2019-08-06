@@ -707,11 +707,8 @@ say_done
 }
 #############################################################################################################
 
-choice=""
-until [ "$choice" = "10" ]; do
 clear
 f_banner
-echo
 echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
 echo -e "\e[93m[+]\e[00m SELECT WHAT YOU WANT TO DO"
 echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
@@ -726,10 +723,11 @@ echo "7. List local socks"
 echo "8. Add new tunnels" 
 echo "9. Custom3"
 echo "10. Exit"
-echo ""
+echo
 
 
 read choice
+
 case $choice in
 
 1)
@@ -759,7 +757,83 @@ check_socks_status
 
 6)
 
+menu=""
+until [ "$menu" = "11" ]; do
+
+clear
+f_banner
+echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+echo -e "\e[93m[+]\e[00m SELECT THE DESIRED OPTION"
+echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
 echo ""
+echo "0. Connect checker thread"
+echo "1. Connect 1 thread"
+echo "2. Connect 2 thread"
+echo "3. Connect 3 thread"
+echo "4. Connect 4 thread"
+echo "5. Connect 5 thread"
+echo "6. Connect 6 thread"
+echo "7. Connect 7 thread"
+echo "8. Connect 8 thread"
+echo "9. Connect 9 thread"
+echo "10. Connect 10 thread"
+echo "11. Exit"
+echo " "
+
+read menu
+case $menu in
+
+0)
+screen -r checker
+;;
+
+1)
+screen -r 1-thread
+;;
+
+2)
+screen -r 2-thread
+;;
+
+3)
+screen -r 3-thread
+;;
+
+4)
+screen -r 4-thread
+;;
+
+5)
+screen -r 5-thread
+;;
+
+6)
+screen -r 6-thread
+;;
+
+7)
+screen -r 7-thread
+;;
+
+8)
+screen -r 8-thread
+;;
+
+9)
+screen -r 9-thread
+;;
+
+10)
+screen -r 10-thread
+;;
+
+11)
+break;;
+
+*) ;;
+
+esac
+done
 ;;
 
 7)
@@ -781,5 +855,3 @@ exit 0
 *) ;;
 
 esac
-done
-##############################################################################################################
