@@ -126,7 +126,7 @@ fi
 sed -e "s/[[:space:]]\+/ /g" ~/tunnels.txt > ~/tuns/tunnels.txt
 
 
-cat > ~/tuns/1-thread.sh <<EOF
+cat > ~/tuns/1-thread.sh <<ELF
 
 #!/bin/bash
 
@@ -168,10 +168,9 @@ sed "/\$SSH_SERVER_IP/d" ~/tuns/tunnels.txt
 fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
+ELF
 
-EOF
-
-cat > ~/tuns/2-thread.sh <<EOF
+cat > ~/tuns/2-thread.sh <<EEF
 
 #!/bin/bash
 
@@ -213,10 +212,9 @@ sed "/\$SSH_SERVER_IP/d" ~/tuns/tunnels.txt
 fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
+EEF
 
-EOF
-
-cat > ~/tuns/3-thread.sh <<EOF
+cat > ~/tuns/3-thread.sh <<FOF
 
 #!/bin/bash
 
@@ -259,9 +257,9 @@ fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
 
-EOF
+FOF
 
-cat > ~/tuns/4-thread.sh <<EOF
+cat > ~/tuns/4-thread.sh <<SOF
 
 #!/bin/bash
 
@@ -304,9 +302,9 @@ fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
 
-EOF
+SOF
 
-cat > ~/tuns/5-thread.sh <<EOF
+cat > ~/tuns/5-thread.sh <<DOT
 
 #!/bin/bash
 
@@ -349,9 +347,9 @@ fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
 
-EOF
+DOT
 
-cat > ~/tuns/6-thread.sh <<EOF
+cat > ~/tuns/6-thread.sh <<KET
 
 #!/bin/bash
 
@@ -394,9 +392,9 @@ fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
 
-EOF
+KET
 
-cat > ~/tuns/7-thread.sh <<EOF
+cat > ~/tuns/7-thread.sh <<PUT
 
 #!/bin/bash
 
@@ -439,9 +437,9 @@ fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
 
-EOF
+PUT
 
-cat > ~/tuns/8-thread.sh <<EOF
+cat > ~/tuns/8-thread.sh <<SEM
 
 #!/bin/bash
 
@@ -484,9 +482,9 @@ fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
 
-EOF
+SEM
 
-cat > ~/tuns/9-thread.sh <<EOF
+cat > ~/tuns/9-thread.sh <<MOT
 
 #!/bin/bash
 
@@ -529,9 +527,9 @@ fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
 
-EOF
+MOT
 
-cat > ~/tuns/10-thread.sh <<EOF
+cat > ~/tuns/10-thread.sh <<ROF
 
 #!/bin/bash
 
@@ -574,9 +572,9 @@ fi
 
 done < <(cat ~/tuns/tunnels.txt | shuf)
 
-EOF
+ROF
 
-cat > ~/tuns/checker.sh <<-EOF
+cat > ~/tuns/checker.sh <<RAF
 
 #!/bin/bash
 
@@ -607,7 +605,7 @@ done < ~/tuns/bad_tunnels.txt
 
 echo "sleeping 30 minutes..."
 done
-EOF
+RAF
 
 chmod +x ~/tuns/*.sh
 screen -dmS 1-thread bash -c "~/tuns/1-thread.sh; exec bash"
@@ -622,7 +620,7 @@ screen -dmS 9-thread bash -c "~/tuns/9-thread.sh; exec bash"
 screen -dmS 10-thread bash -c "~/tuns/10-thread.sh; exec bash"
 screen -dmS checker bash -c "~/tuns/checker.sh; exec bash"
 
-cat > ~/tuns/localsocks.txt<<-EOF
+cat > ~/tuns/localsocks.txt<<OKF
 socks5://127.0.0.1:50001
 socks5://127.0.0.1:50002
 socks5://127.0.0.1:50003
@@ -633,7 +631,7 @@ socks5://127.0.0.1:50007
 socks5://127.0.0.1:50008
 socks5://127.0.0.1:50009
 socks5://127.0.0.1:50010
-EOF
+OKF
 
 #quantity=100 # Количество соксов каждого потока для программы
 #awk '{for(i=1;i<=count;i++)print}' count=$quantity ~/tuns/localsocks.txt > ~/tuns/temp_localsocks.txt; mv ~/tuns/temp_localsocks.txt ~/tuns/localsocks.txt
