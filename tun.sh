@@ -726,7 +726,7 @@ echo "7. List local socks"
 echo "8. Add new tunnels" 
 echo "9. Custom3"
 echo "10. Exit"
-echo
+echo ""
 
 
 read choice
