@@ -2,7 +2,7 @@
 #
 # Tun Control
 #
-# Install: cd /usr/local/bin && wget -O tunx https://raw.githubusercontent.com/debihard/tuncontrol/master/tun.sh && chmod +x xhost
+# Install: cd /usr/local/bin && wget -O tunx https://raw.githubusercontent.com/debihard/tuncontrol/master/tun.sh && chmod +x tunx
 #
 # Usage: tunx
 #
