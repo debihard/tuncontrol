@@ -112,7 +112,8 @@ if ! dpkg -s ${pkgs} >/dev/null 2>&1; then
   else
   echo -e "${pkgs} is installed - ${RED}OK${NC} "
 fi
-done}
+done
+}
 #############################################################################################################
 
 start_all_socks(){
