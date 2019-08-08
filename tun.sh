@@ -2,7 +2,7 @@
 #
 # Tun Control
 #
-# Install: cd /usr/local/bin && wget -O xhost https://raw.githubusercontent.com/andrewsokolok/apache_vhostcreator/master/xhost.sh && chmod +x xhost
+# Install: cd /usr/local/bin && wget -O tunx https://raw.githubusercontent.com/andrewsokolok/apache_vhostcreator/master/xhost.sh && chmod +x xhost
 #
 # Usage: tuncontrol
 #
@@ -655,20 +655,60 @@ killall ssh
 }
 #############################################################################################################
 killall_threads(){
-killall 1-thread.sh
-killall 2-thread.sh
-killall 3-thread.sh
-killall 4-thread.sh
-killall 5-thread.sh
-killall 6-thread.sh
-killall 7-thread.sh
-killall 8-thread.sh
-killall 9-thread.sh
-killall 10-thread.sh
+kill $(ps aux | grep '[1]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[2]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[3]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[4]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[5]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[6]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[7]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[8]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[9]-thread.sh' | awk '{print $2}') 2> /dev/null
+kill $(ps aux | grep '[10]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_1(){
+kill $(ps aux | grep '[1]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_2(){
+kill $(ps aux | grep '[2]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_3(){
+kill $(ps aux | grep '[3]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_4(){
+kill $(ps aux | grep '[4]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_5(){
+kill $(ps aux | grep '[5]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_6(){
+kill $(ps aux | grep '[6]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_7(){
+kill $(ps aux | grep '[7]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_8(){
+kill $(ps aux | grep '[8]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_9(){
+kill $(ps aux | grep '[9]-thread.sh' | awk '{print $2}') 2> /dev/null
+}
+#############################################################################################################
+killall_threads_10(){
+kill $(ps aux | grep '[10]-thread.sh' | awk '{print $2}') 2> /dev/null
 }
 #############################################################################################################
 killall_checker(){
-killall checker.sh
+kill $(ps aux | grep '[b]ash -c ~/tuns/checker.sh' | awk '{print $2}') 2> /dev/null
 }
 #############################################################################################################
 show_socks_list(){
@@ -684,16 +724,16 @@ ps aux | grep "ssh -o StrictHostKeychecking=no" | cut -d"?" -f2 | cut -d" " -f25
 }
 #############################################################################################################
 check_socks_status(){
-curl --socks5 localhost:50001 curl ifconfig.co
-curl --socks5 localhost:50002 curl ifconfig.co
-curl --socks5 localhost:50003 curl ifconfig.co
-curl --socks5 localhost:50004 curl ifconfig.co
-curl --socks5 localhost:50005 curl ifconfig.co
-curl --socks5 localhost:50006 curl ifconfig.co
-curl --socks5 localhost:50007 curl ifconfig.co
-curl --socks5 localhost:50008 curl ifconfig.co
-curl --socks5 localhost:50009 curl ifconfig.co
-curl --socks5 localhost:50010 curl ifconfig.co
+curl --socks5 localhost:50001 curl ifconfig.co &
+curl --socks5 localhost:50002 curl ifconfig.co &
+curl --socks5 localhost:50003 curl ifconfig.co &
+curl --socks5 localhost:50004 curl ifconfig.co &
+curl --socks5 localhost:50005 curl ifconfig.co &
+curl --socks5 localhost:50006 curl ifconfig.co &
+curl --socks5 localhost:50007 curl ifconfig.co &
+curl --socks5 localhost:50008 curl ifconfig.co &
+curl --socks5 localhost:50009 curl ifconfig.co &
+curl --socks5 localhost:50010 curl ifconfig.co &
 }
 #############################################################################################################
 list_local_socks(){
