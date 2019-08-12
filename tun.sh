@@ -2,9 +2,9 @@
 #
 # Tun Control
 #
-# Install: cd /usr/local/bin && wget -O tunx https://raw.githubusercontent.com/andrewsokolok/apache_vhostcreator/master/xhost.sh && chmod +x xhost
+# Install: cd /usr/local/bin && wget -O xtun https://raw.githubusercontent.com/debihard/tuncontrol/master/tun.sh && chmod +x xtun
 #
-# Usage: tuncontrol
+# Usage: xtun
 #
 while true
 do
