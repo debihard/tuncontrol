@@ -970,7 +970,6 @@ exit 0
 
 esac
 echo ""
-fi
   echo ""
   echo "Press [enter] to restart script or [q] and then [enter] to quit"
   read x
