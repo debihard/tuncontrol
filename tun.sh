@@ -973,7 +973,7 @@ echo ""
   echo ""
   echo "Press [enter] to restart script or [q] and then [enter] to quit"
   read x
-  if [[ "\$x" == 'q' ]]
+  if [[ "$x" == 'q' ]]
   then
     break
   fi
