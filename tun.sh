@@ -650,9 +650,7 @@ killall_screen(){
 killall screen
 }
 #############################################################################################################
-killall_ssh(){
-killall ssh
-}
+
 #############################################################################################################
 killall_threads(){
 kill $(ps aux | grep '[1]-thread.sh' | awk '{print $2}') 2> /dev/null
@@ -762,7 +760,7 @@ echo "5. Check socks status"
 echo "6. Connect screen session for check status thread" 
 echo "7. List local socks"
 echo "8. Add new tunnels" 
-echo "9. Custom3"
+echo "9. Stop thread"
 echo "10. Exit"
 echo
 
@@ -886,7 +884,83 @@ add_new_tunnels
 ;;
 
 9)
-echo "custom3"
+menu2=""
+until [ "$menu2" = "11" ]; do
+
+clear
+f_banner
+echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+echo -e "\e[93m[+]\e[00m SELECT THE DESIRED OPTION"
+echo -e "\e[34m---------------------------------------------------------------------------------------------------------\e[00m"
+echo ""
+echo "0. Kill checker thread"
+echo "1. Kill 1 thread"
+echo "2. Kill 2 thread"
+echo "3. Kill 3 thread"
+echo "4. Kill 4 thread"
+echo "5. Kill 5 thread"
+echo "6. Kill 6 thread"
+echo "7. Kill 7 thread"
+echo "8. Kill 8 thread"
+echo "9. Kill 9 thread"
+echo "10. Kill 10 thread"
+echo "11. Exit"
+echo " "
+
+read menu2
+case $menu2 in
+
+0)
+killall_checker
+;;
+
+1)
+killall_threads_1
+;;
+
+2)
+killall_threads_2
+;;
+
+3)
+killall_threads_3
+;;
+
+4)
+killall_threads_4
+;;
+
+5)
+killall_threads_5
+;;
+
+6)
+killall_threads_6
+;;
+
+7)
+killall_threads_7
+;;
+
+8)
+killall_threads_8
+;;
+
+9)
+killall_threads_9
+;;
+
+10)
+killall_threads_10
+;;
+
+11)
+break;;
+
+*) ;;
+
+esac
+done
 ;;
 
 10)
