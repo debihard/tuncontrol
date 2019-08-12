@@ -776,10 +776,7 @@ start_all_socks
 ;;
 
 2)
-killall_screen
 killall_threads
-killall_checker
-killall_ssh
 ;;
 
 3)
