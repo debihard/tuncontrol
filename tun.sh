@@ -6,6 +6,8 @@
 #
 # Usage: tuncontrol
 #
+while true
+do
 
 spinner ()
 {
@@ -967,3 +969,4 @@ exit 0
 *) ;;
 
 esac
+done
