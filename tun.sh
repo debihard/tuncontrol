@@ -665,50 +665,72 @@ kill $(ps aux | grep '[7]-thread.sh' | awk '{print $2}') 2> /dev/null
 kill $(ps aux | grep '[8]-thread.sh' | awk '{print $2}') 2> /dev/null
 kill $(ps aux | grep '[9]-thread.sh' | awk '{print $2}') 2> /dev/null
 kill $(ps aux | grep '[10]-thread.sh' | awk '{print $2}') 2> /dev/null
+
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50001' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50002' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50003' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50004' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50005' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50006' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50007' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50008' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50009' | awk '{print $2}' 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50010' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_1(){
 kill $(ps aux | grep '[1]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50001' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_2(){
 kill $(ps aux | grep '[2]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50002' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_3(){
 kill $(ps aux | grep '[3]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50003' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_4(){
 kill $(ps aux | grep '[4]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50004' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_5(){
 kill $(ps aux | grep '[5]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50005' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_6(){
 kill $(ps aux | grep '[6]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50006' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_7(){
 kill $(ps aux | grep '[7]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50007' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_8(){
 kill $(ps aux | grep '[8]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50008' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_9(){
 kill $(ps aux | grep '[9]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50009' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_threads_10(){
 kill $(ps aux | grep '[10]-thread.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 50010' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 killall_checker(){
 kill $(ps aux | grep '[b]ash -c ~/tuns/checker.sh' | awk '{print $2}') 2> /dev/null
+ps aux | grep '[s]sh -o StrictHostKeychecking=no -o ConnectTimeout=10 -o UserKnownHostsFile=/dev/null -fCN -D 9401' | awk '{print $2}' 2> /dev/null
 }
 #############################################################################################################
 show_socks_list(){
